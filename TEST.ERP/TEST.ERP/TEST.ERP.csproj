@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!--<Nullable>enable</Nullable>-->
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoItX.NetCore" Version="3.3.16.1" />
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageReference Include="Microsoft.Playwright" Version="1.56.0" />
+    <PackageReference Include="Microsoft.Playwright.NUnit" Version="1.56.0" />
+    <PackageReference Include="Microsoft.Playwright.TestAdapter" Version="1.56.0" />
+    <PackageReference Include="NUnit" Version="4.4.0" />
+    <PackageReference Include="NUnit.Analyzers" Version="4.11.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NUnit3TestAdapter" Version="6.0.0-beta.1" />
+    <PackageReference Include="TextCopy" Version="6.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.Playwright.NUnit" />
+    <Using Include="NUnit.Framework" />
+    <Using Include="System.Text.RegularExpressions" />
+    <Using Include="System.Threading.Tasks" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Imports\Sales\" />
+    <Folder Include="Imports\Purchase\" />
+    <Folder Include="Imports\Inventory\" />
+    <Folder Include="Imports\Accounting\" />
+    <Folder Include="Models\Sales\" />
+    <Folder Include="Models\Purchase\" />
+    <Folder Include="Models\Inventory\" />
+    <Folder Include="Pages\Inventory\" />
+    <Folder Include="Pages\Sales\" />
+    <Folder Include="Pages\Purchase\" />
+    <Folder Include="Tests\Sales\" />
+    <Folder Include="Tests\Purchase\" />
+    <Folder Include="Tests\Inventory\" />
+  </ItemGroup>
+
+</Project>

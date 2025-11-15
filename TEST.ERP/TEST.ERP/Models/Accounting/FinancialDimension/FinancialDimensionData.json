@@ -1,0 +1,20 @@
+{
+  "FinancialDimension": [
+    {
+      "Division": "Sales",
+      "Department": "Collection"
+    },
+    {
+      "Division": "Purchase",
+      "Department": "Distribution"
+    }
+  ],
+  "Delete": [
+    {
+      "Division": "Sales"
+    },
+    {
+      "Division": "Purchase"
+    }
+  ]
+}
