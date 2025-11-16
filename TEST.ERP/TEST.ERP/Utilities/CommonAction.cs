@@ -116,7 +116,7 @@ namespace TEST.ERP.Utilities
         public async Task ClickOnAccounting()
         {
             await _page.Locator(changeModule).ClickAsync();
-            await _page.GetByRole(AriaRole.Link, new() { Name = "Accounting" }).ClickAsync(); 
+            await _page.GetByRole(AriaRole.Link, new() { Name = "Accounting" }).ClickAsync();
         }
         public async Task ClickOnSales()
         {
@@ -937,6 +937,100 @@ namespace TEST.ERP.Utilities
             string actualMessage = await element.InnerTextAsync();
 
             Assert.That(actualMessage, Does.Contain(expectedMessage));
+        }
+        #endregion
+
+        #region Lookups
+        public async Task SelectDataRowOption(string optionText)
+        {
+            // 1. Open dropdown
+            await _page.Locator("//tr[@class='dxgvDataRow_Office365']").ClickAsync();
+
+            // 2. Wait for list items to load
+            var options = _page.GetByRole(AriaRole.Option);
+            await options.First.WaitForAsync();
+
+            // 3. Filter options by partial text
+            var filtered = options.Filter(new() { HasText = optionText });
+
+            if (await filtered.CountAsync() == 0)
+                throw new Exception($"Option : '{optionText}' not found.");
+
+            // 4. Select the first match
+            await filtered.First.ClickAsync();
+            await _page.WaitForTimeoutAsync(2000);
+        }
+        public async Task SelectItemRowOption(string optionText)
+        {
+            // 1. Open dropdown
+            await _page.Locator("//tr[@class='dxeListBoxItemRow_Office365']").ClickAsync();
+
+            // 2. Wait for list items to load
+            var options = _page.GetByRole(AriaRole.Option);
+            await options.First.WaitForAsync();
+
+            // 3. Filter options by partial text
+            var filtered = options.Filter(new() { HasText = optionText });
+
+            if (await filtered.CountAsync() == 0)
+                throw new Exception($"Option : '{optionText}' not found.");
+
+            // 4. Select the first match
+            await filtered.First.ClickAsync();
+            await _page.WaitForTimeoutAsync(2000);
+        }
+        public async Task SelectListItemOption(string optionText)
+        {
+            await _page.Locator("//div[@class='dx-item dx-list-item']").ClickAsync();
+
+            var options = _page.GetByRole(AriaRole.Option);
+            await options.First.WaitForAsync();
+
+            // 3. Filter options by partial text
+            var filtered = options.Filter(new() { HasText = optionText });
+
+            if (await filtered.CountAsync() == 0)
+                throw new Exception($"Option : '{optionText}' not found.");
+
+            // 4. Select the first match
+            await filtered.First.ClickAsync();
+            await _page.WaitForTimeoutAsync(2000);
+        }
+        public async Task SelectLookUpTextOption(string optionText)
+        {
+            await _page.Locator("//div[@class='lookup-text']").ClickAsync();
+            var options = _page.GetByRole(AriaRole.Option);
+            await options.First.WaitForAsync();
+
+            // 3. Filter options by partial text
+            var filtered = options.Filter(new() { HasText = optionText });
+
+            if (await filtered.CountAsync() == 0)
+                throw new Exception($"Option : '{optionText}' not found.");
+
+            // 4. Select the first match
+            await filtered.First.ClickAsync();
+            await _page.WaitForTimeoutAsync(2000);
+            await _page.ClickAsync("//img[@alt='Next']");
+            await _page.WaitForTimeoutAsync(2000);
+        }
+        public async Task SelectLookUpDataOption(string optionText)
+        {
+            await _page.Locator("//div[@class='lookup-text']").ClickAsync();
+            var options = _page.GetByRole(AriaRole.Option);
+            await options.First.WaitForAsync();
+
+            // 3. Filter options by partial text
+            var filtered = options.Filter(new() { HasText = optionText });
+
+            if (await filtered.CountAsync() == 0)
+                throw new Exception($"Option : '{optionText}' not found.");
+
+            // 4. Select the first match
+            await filtered.First.ClickAsync();
+            await _page.WaitForTimeoutAsync(2000);
+            await _page.ClickAsync("//div[contains(@id, '_NextPage')]");
+            await _page.WaitForTimeoutAsync(2000);
         }
         #endregion
 
