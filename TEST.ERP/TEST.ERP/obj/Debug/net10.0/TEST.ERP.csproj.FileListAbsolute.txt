@@ -520,6 +520,7 @@ D:\Playwright\TEST.ERP\TEST.ERP\obj\Debug\net10.0\TEST.ERP.genautoregisteredexte
 D:\Playwright\TEST.ERP\TEST.ERP\obj\Debug\net10.0\TEST.ERP.AssemblyInfoInputs.cache
 D:\Playwright\TEST.ERP\TEST.ERP\obj\Debug\net10.0\TEST.ERP.AssemblyInfo.cs
 D:\Playwright\TEST.ERP\TEST.ERP\obj\Debug\net10.0\TEST.ERP.csproj.CoreCompileInputs.cache
+D:\Playwright\TEST.ERP\TEST.ERP\obj\Debug\net10.0\TEST.ERP.sourcelink.json
 D:\Playwright\TEST.ERP\TEST.ERP\obj\Debug\net10.0\TEST.ERP.csproj.Up2Date
 D:\Playwright\TEST.ERP\TEST.ERP\obj\Debug\net10.0\TEST.ERP.dll
 D:\Playwright\TEST.ERP\TEST.ERP\obj\Debug\net10.0\refint\TEST.ERP.dll

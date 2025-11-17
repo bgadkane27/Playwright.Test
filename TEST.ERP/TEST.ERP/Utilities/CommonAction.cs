@@ -1034,6 +1034,55 @@ namespace TEST.ERP.Utilities
         }
         #endregion
 
+        #region Improvised Lookup Selection
+        public async Task SelectLookupText(string optionText)
+        {
+            // Locator for each lookup item
+            var lookupItems = _page.Locator("td .lookup-text");            
+
+            bool optionFound = false;
+
+            while (!optionFound)
+            {
+                // Wait for lookup list to load
+                await lookupItems.First.WaitForAsync();
+
+                // Get count
+                int count = await lookupItems.CountAsync();
+
+                for (int i = 0; i < count; i++)
+                {
+                    string text = await lookupItems.Nth(i).InnerTextAsync();
+
+                    if (text.Contains(optionText, StringComparison.OrdinalIgnoreCase))
+                    {
+                        // Scroll into view and click
+                        await lookupItems.Nth(i).ScrollIntoViewIfNeededAsync();
+                        await lookupItems.Nth(i).ClickAsync();
+                        await _page.WaitForTimeoutAsync(1000);
+                        optionFound = true;
+                        break;
+                    }
+                }
+
+                if (optionFound)
+                    break;
+
+                // Locator for NEXT button
+                var nextButton = _page.GetByRole(AriaRole.Button, new() { Name = "next-icon" });
+
+                // Check if NEXT button is disabled → stop searching
+                bool isNextDisabled = await nextButton.IsDisabledAsync();
+                if (isNextDisabled)
+                    throw new Exception($"Option '{optionText}' not found.");
+
+                // Go to next page
+                await nextButton.ClickAsync();
+                await _page.WaitForTimeoutAsync(500);
+            }
+        }
+        #endregion
+
         #endregion
     }
 }

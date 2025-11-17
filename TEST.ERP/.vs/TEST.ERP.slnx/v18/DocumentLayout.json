@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Playwright\\TEST.ERP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\playwright\\test.erp\\test.erp\\tests\\common\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\tests\\common\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\playwright\\test.erp\\test.erp\\utilities\\commonaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\utilities\\commonaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BaseTest.cs",
-              "DocumentMoniker": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
-              "RelativeDocumentMoniker": "TEST.ERP\\Tests\\Common\\BaseTest.cs",
-              "ToolTip": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
-              "RelativeToolTip": "TEST.ERP\\Tests\\Common\\BaseTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Title": "CommonAction.cs",
+              "DocumentMoniker": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Utilities\\CommonAction.cs",
+              "RelativeDocumentMoniker": "TEST.ERP\\Utilities\\CommonAction.cs",
+              "ToolTip": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Utilities\\CommonAction.cs",
+              "RelativeToolTip": "TEST.ERP\\Utilities\\CommonAction.cs",
+              "ViewState": "AgIAAPsDAAAAAAAAAAAiwA0EAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T07:21:32.138Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-11-17T01:52:21.381Z",
               "EditorCaption": ""
             }
           ]
