@@ -134,5 +134,142 @@ namespace TEST.ERP.Helpers
 
             throw new Exception($"Option containing '{partialText}' was not found after scrolling.");
         }
+
+        // ============================================================
+        // 8) Select an option in the header entity lookup using pagination.
+        // ============================================================
+        public async Task SelectHeaderLookupText(string optionText)
+        {
+            // Locator for each lookup item
+            var lookupItems = _page.Locator("td .lookup-text");
+
+            bool optionFound = false;
+
+            while (!optionFound)
+            {
+                // Wait for lookup list to load
+                await lookupItems.First.WaitForAsync();
+
+                // Get count
+                int count = await lookupItems.CountAsync();
+
+                for (int i = 0; i < count; i++)
+                {
+                    string text = await lookupItems.Nth(i).InnerTextAsync();
+
+                    if (text.Contains(optionText, StringComparison.OrdinalIgnoreCase))
+                    {
+                        // Scroll into view and click
+                        await lookupItems.Nth(i).ScrollIntoViewIfNeededAsync();
+                        await lookupItems.Nth(i).ClickAsync();
+                        await _page.WaitForTimeoutAsync(1000);
+                        optionFound = true;
+                        break;
+                    }
+                }
+
+                if (optionFound)
+                    break;
+
+                // Locator for NEXT button
+                var nextButton = _page.GetByRole(AriaRole.Button, new() { Name = "next-icon" });
+
+                // Check if NEXT button is disabled → stop searching
+                bool isNextDisabled = await nextButton.IsDisabledAsync();
+                if (isNextDisabled)
+                    throw new Exception($"Option '{optionText}' not found.");
+
+                // Go to next page
+                await nextButton.ClickAsync();
+                await _page.WaitForTimeoutAsync(500);
+            }
+        }
+        // ============================================================
+        // 9) Select an option - simpler
+        // ============================================================
+        public async Task SelectLookupText(string optionText)
+        {
+            var locator = _page.Locator($"td .lookup-text:has-text('{optionText}')");
+
+            // Wait for at least one match
+            await locator.First.WaitForAsync();
+
+            await locator.First.ScrollIntoViewIfNeededAsync();
+            await locator.First.ClickAsync();
+            await _page.WaitForTimeoutAsync(500);
+        }
+        // ============================================================
+        // 10) Select an option in the line entity lookup using pagination.
+        // ============================================================
+        public async Task SelectLineLookupText(string optionText)
+        {
+            // Locator for each lookup item
+            var lookupItems = _page.Locator("td .lookup-text");
+
+            bool optionFound = false;
+
+            while (!optionFound)
+            {
+                // Wait for lookup list to load
+                await lookupItems.First.WaitForAsync();
+
+                // Get count
+                int count = await lookupItems.CountAsync();
+
+                for (int i = 0; i < count; i++)
+                {
+                    string text = await lookupItems.Nth(i).InnerTextAsync();
+
+                    if (text.Contains(optionText, StringComparison.OrdinalIgnoreCase))
+                    {
+                        // Scroll into view and click
+                        await lookupItems.Nth(i).ScrollIntoViewIfNeededAsync();
+                        await lookupItems.Nth(i).ClickAsync();
+                        await _page.WaitForTimeoutAsync(1000);
+                        optionFound = true;
+                        break;
+                    }
+                }
+
+                if (optionFound)
+                    break;
+
+                // Locator for NEXT button
+                var nextButton = _page.GetByAltText("Next");
+
+                // Check if NEXT button is disabled → stop searching
+                bool isNextDisabled = await nextButton.IsDisabledAsync();
+                if (isNextDisabled)
+                    throw new Exception($"Option '{optionText}' not found.");
+
+                // Go to next page
+                await nextButton.ClickAsync();
+                await _page.WaitForTimeoutAsync(500);
+            }
+        }
+        // ============================================================
+        // 11) Select an option in the line entity lookup using pagination.
+        // ============================================================
+        public async Task SelectLookupDataRow(string optionText)
+        {
+            // All lookup rows
+            var rows = _page.Locator("tr.dxgvDataRow_Office365");
+
+            // Ensure rows are loaded
+            await rows.First.WaitForAsync();
+
+            // Filter matching row (supports partial text)
+            var match = rows.Filter(new() { HasText = optionText });
+            
+            // Validate if a matching row exists
+            if (await match.CountAsync() == 0)
+                throw new Exception($"Option '{optionText}' not found.");
+
+            // Click the first matching row
+            await match.First.ScrollIntoViewIfNeededAsync();
+            await match.First.ClickAsync();
+            await _page.WaitForTimeoutAsync(1000);
+        }
+
     }
 }

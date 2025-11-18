@@ -43,8 +43,8 @@ namespace TEST.ERP.Tests.Common
         private async Task Login()
         {
             #region Load Test Data
-            var dataFile = Helper.GetDataFile("Common", "Login", "LoginData");
-            var loginModel = Helper.ConvertJsonDataModel<LoginDM>(dataFile);
+            var dataFile = DataHelper.GetDataFile("Common", "Login", "LoginData");
+            var loginModel = DataHelper.ConvertJsonDataModel<LoginDM>(dataFile);
             #endregion
 
             #region Page Objects

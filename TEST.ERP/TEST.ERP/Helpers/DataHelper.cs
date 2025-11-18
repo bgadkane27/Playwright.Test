@@ -1,16 +1,14 @@
-﻿using Newtonsoft.Json;
+﻿using AutoIt;
+using Microsoft.Playwright;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace TEST.ERP.Helpers
 {
-    public static class Helper
-    {
-        public static async Task WaitForSeconds(int seconds)
-        {
-            await Task.Delay(seconds * 1000);
-        }
+    public static class DataHelper
+    {        
         public static string GetFile(string fileName)
         {
             string result;
@@ -26,18 +24,6 @@ namespace TEST.ERP.Helpers
                 }
             }
             return result;
-        }
-        public static string GetDataFile1(string folder, string subFolder, string fileName)
-        {
-            var fullFilePath = AppDomain.CurrentDomain.BaseDirectory.Substring(0, 1)
-                                            + @":\Enfinity\Enfinity.ERP\Enfinity.ERP\Models\";
-            if (!string.IsNullOrEmpty(subFolder))
-            {
-                fullFilePath += subFolder + @"\";
-            }
-            fullFilePath += fileName + @".json";
-
-            return GetFile(fullFilePath);
         }
         public static string GetDataFile(string folder, string subFolder, string fileName)
         {
@@ -58,6 +44,13 @@ namespace TEST.ERP.Helpers
             fullFilePath = Path.Combine(fullFilePath, $"{fileName}.json");
 
             return GetFile(fullFilePath);
+        }
+        public static T ConvertJsonDataModel<T>(string fileData)
+        {
+            var jsonData = JsonConvert.DeserializeObject<T>(fileData);
+            if (jsonData == null)
+                throw new InvalidOperationException("Failed to deserialize JSON");
+            return jsonData;
         }
         public static string GetImportFile(string folder, string fileName, string extension = ".Xlsx")
         {
@@ -87,48 +80,27 @@ namespace TEST.ERP.Helpers
                 throw new Exception($"Error locating import file '{fileName}{extension}': {ex.Message}", ex);
             }
         }
-        public static T ConvertJsonDataModel<T>(string fileData)
+        public static void UploadFile(string filePath)
         {
-            var jsonData = JsonConvert.DeserializeObject<T>(fileData);
-            if (jsonData == null)
-                throw new InvalidOperationException("Failed to deserialize JSON");
-            return jsonData;
-        }
-        public static List<T> ConvertJsonListDataModel<T>(string fileData, string section)
-        {
-            var jsonData = JsonConvert.DeserializeObject<Dictionary<string, List<T>>>(fileData);
-            if (jsonData == null)
-                throw new InvalidOperationException("Failed to deserialize JSON");
+            try
+            {
+                // Wait up to 10 seconds for the dialog
+                AutoItX.WinWaitActive("Open", "", 10);
 
-            return jsonData.ContainsKey(section) ? jsonData[section] : new List<T>();
-        }
-        //public async Task ScrollToElement(IWebElement element)
-        //{
-        //    IJavaScriptExecutor js = (IJavaScriptExecutor)BaseTest._driver;
-        //    js.ExecuteScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center' });", element);
-        //    Thread.Sleep(1000);
-        //}
-        //public async Task UploadFile(string filePath)
-        //{
-        //    try
-        //    {
-        //        // Wait up to 10 seconds for the dialog
-        //        AutoItX.WinWaitActive("Open", "", 10);
+                // Set the file path
+                AutoItX.ControlSetText("Open", "", "Edit1", filePath);
 
-        //        // Set the file path
-        //        AutoItX.ControlSetText("Open", "", "Edit1", filePath);
+                // Wait up to 10 seconds for the dialog
+                AutoItX.WinWaitActive("Open", "", 2);
 
-        //        // Wait up to 10 seconds for the dialog
-        //        AutoItX.WinWaitActive("Open", "", 2);
-
-        //        // Click Open
-        //        AutoItX.ControlClick("Open", "", "Button1");
-        //        Thread.Sleep(2000);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception($"File upload failed: {ex.Message}", ex);
-        //    }
-        //}
+                // Click Open
+                AutoItX.ControlClick("Open", "", "Button1");
+                Thread.Sleep(2000);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"File upload failed: {ex.Message}", ex);
+            }
+        }                     
     }
 }

@@ -20,8 +20,8 @@ namespace TEST.ERP.Tests.Accounting
             try
             {
                 #region Load Test Data
-                var dataFile = Helper.GetDataFile("Accounting", "FinancialDimension", "FinancialDimensionData");
-                var financialDimensionModel = Helper.ConvertJsonDataModel<FinancialDimensionRoot>(dataFile);
+                var dataFile = DataHelper.GetDataFile("Accounting", "FinancialDimension", "FinancialDimensionData");
+                var financialDimensionModel = DataHelper.ConvertJsonDataModel<FinancialDimensionRoot>(dataFile);
 
                 var records = financialDimensionModel.FinancialDimension;
                 #endregion
@@ -97,8 +97,8 @@ namespace TEST.ERP.Tests.Accounting
             try
             {
                 #region Load Test Data
-                var dataFile = Helper.GetDataFile("Accounting", "FinancialDimension", "FinancialDimensionData");
-                var financialDimensionModel = Helper.ConvertJsonDataModel<FinancialDimensionRoot>(dataFile);
+                var dataFile = DataHelper.GetDataFile("Accounting", "FinancialDimension", "FinancialDimensionData");
+                var financialDimensionModel = DataHelper.ConvertJsonDataModel<FinancialDimensionRoot>(dataFile);
 
                 var records = financialDimensionModel.FinancialDimension;
                 #endregion
