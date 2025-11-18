@@ -15,128 +15,7 @@ namespace TEST.ERP.Helpers
         }
 
         // ============================================================
-        // 1) CLICK DROPDOWN TO OPEN IT
-        // ============================================================
-        private async Task OpenDropdownAsync(string dropdownSelector)
-        {
-            await _page.Locator(dropdownSelector).ClickAsync();
-            await _page.WaitForTimeoutAsync(200); // small stabilization delay
-        }
-
-        // ============================================================
-        // 2) WAIT FOR LIST TO APPEAR
-        // ============================================================
-        private async Task WaitForListToLoadAsync()
-        {
-            await _page.Locator(".dx-scrollable-content").WaitForAsync(new()
-            {
-                State = WaitForSelectorState.Visible
-            });
-        }
-
-        // ============================================================
-        // 3) SIMPLE SELECT (Exact Match)
-        // ============================================================
-        public async Task SelectOptionExactAsync(string dropdownSelector, string optionText)
-        {
-            await OpenDropdownAsync(dropdownSelector);
-            await WaitForListToLoadAsync();
-
-            var option = _page.GetByRole(AriaRole.Option, new() { Name = optionText });
-            await option.First.ClickAsync();
-        }
-
-        // ============================================================
-        // 4) SIMPLE SELECT (Partial Match)
-        // ============================================================
-        public async Task SelectOptionContainsAsync(string dropdownSelector, string partialText)
-        {
-            await OpenDropdownAsync(dropdownSelector);
-            await WaitForListToLoadAsync();
-
-            var option = _page.GetByRole(AriaRole.Option)
-                              .Filter(new() { HasText = partialText });
-
-            await option.First.ClickAsync();
-        }
-
-        // ============================================================
-        // 5) SELECT WITH EXISTENCE CHECK
-        // ============================================================
-        public async Task<bool> TrySelectOptionAsync(string dropdownSelector, string optionText)
-        {
-            await OpenDropdownAsync(dropdownSelector);
-            await WaitForListToLoadAsync();
-
-            var option = _page.GetByRole(AriaRole.Option, new() { Name = optionText });
-
-            if (await option.CountAsync() == 0)
-                return false;
-
-            await option.First.ClickAsync();
-            return true;
-        }
-
-        // ============================================================
-        // 6) SCROLL + SELECT (Exact Match)
-        // ============================================================
-        public async Task ScrollAndSelectOptionAsync(string dropdownSelector, string optionText)
-        {
-            await OpenDropdownAsync(dropdownSelector);
-            await WaitForListToLoadAsync();
-
-            var container = _page.Locator(".dx-scrollable-content");
-
-            for (int i = 0; i < 20; i++)
-            {
-                var option = _page.GetByRole(AriaRole.Option, new() { Name = optionText });
-
-                if (await option.CountAsync() > 0)
-                {
-                    await option.First.ScrollIntoViewIfNeededAsync();
-                    await option.First.ClickAsync();
-                    return;
-                }
-
-                // Scroll down a bit
-                await container.EvaluateAsync("el => el.scrollBy(0, 300)");
-                await _page.WaitForTimeoutAsync(120);
-            }
-
-            throw new Exception($"Option '{optionText}' was not found after scrolling.");
-        }
-
-        // ============================================================
-        // 7) SCROLL + SELECT (Partial Match)
-        // ============================================================
-        public async Task ScrollAndSelectOptionContainsAsync(string dropdownSelector, string partialText)
-        {
-            await OpenDropdownAsync(dropdownSelector);
-            await WaitForListToLoadAsync();
-
-            var container = _page.Locator(".dx-scrollable-content");
-
-            for (int i = 0; i < 20; i++)
-            {
-                var option = _page.GetByRole(AriaRole.Option)
-                                  .Filter(new() { HasText = partialText });
-
-                if (await option.CountAsync() > 0)
-                {
-                    await option.First.ScrollIntoViewIfNeededAsync();
-                    await option.First.ClickAsync();
-                    return;
-                }
-
-                await container.EvaluateAsync("el => el.scrollBy(0, 300)");
-                await _page.WaitForTimeoutAsync(150);
-            }
-
-            throw new Exception($"Option containing '{partialText}' was not found after scrolling.");
-        }
-
-        // ============================================================
-        // 8) Select an option in the header entity lookup using pagination.
+        // 1) Select an option in the header entity lookup using pagination.
         // ============================================================
         public async Task SelectHeaderLookupText(string optionText)
         {
@@ -185,7 +64,7 @@ namespace TEST.ERP.Helpers
             }
         }
         // ============================================================
-        // 9) Select an option - simpler
+        // 2) Select an option - Directly
         // ============================================================
         public async Task SelectLookupText(string optionText)
         {
@@ -199,7 +78,7 @@ namespace TEST.ERP.Helpers
             await _page.WaitForTimeoutAsync(500);
         }
         // ============================================================
-        // 10) Select an option in the line entity lookup using pagination.
+        // 3) Select an option in the line entity lookup using pagination.
         // ============================================================
         public async Task SelectLineLookupText(string optionText)
         {
@@ -248,7 +127,7 @@ namespace TEST.ERP.Helpers
             }
         }
         // ============================================================
-        // 11) Select an option in the line entity lookup using pagination.
+        // 4) Select an option using Data Row
         // ============================================================
         public async Task SelectLookupDataRow(string optionText)
         {
@@ -260,7 +139,7 @@ namespace TEST.ERP.Helpers
 
             // Filter matching row (supports partial text)
             var match = rows.Filter(new() { HasText = optionText });
-            
+
             // Validate if a matching row exists
             if (await match.CountAsync() == 0)
                 throw new Exception($"Option '{optionText}' not found.");
@@ -270,6 +149,122 @@ namespace TEST.ERP.Helpers
             await match.First.ClickAsync();
             await _page.WaitForTimeoutAsync(1000);
         }
+        // ============================================================
+        // 5) Select an option using Box Item Row
+        // ============================================================
+        public async Task SelectLookupBoxItemRow(string optionText)
+        {
+            // All lookup rows
+            var rows = _page.Locator("tr.dxeListBoxItemRow_Office365");
 
+            // Ensure rows are loaded
+            await rows.First.WaitForAsync();
+
+            // Filter matching row (supports partial text)
+            var match = rows.Filter(new() { HasText = optionText });
+
+            int matchCount = await match.CountAsync();
+
+            if (matchCount == 0)
+                throw new Exception($"Option '{optionText}' not found.");
+
+            await match.First.ScrollIntoViewIfNeededAsync();
+            await match.First.ClickAsync();
+
+            await _page.WaitForTimeoutAsync(500);
+        }
+        // ============================================================
+        // 6) Select an option using List Item Content
+        // ============================================================
+        public async Task SelectLookupListItem(string optionText)
+        {
+            // All items in the lookup list
+            var items = _page.Locator(".dx-list-item .dx-item-content");
+
+            // Ensure the list has loaded
+            await items.First.WaitForAsync();
+
+            // Filter items using text (supports partial match)
+            var match = items.Filter(new() { HasText = optionText });
+
+            int count = await match.CountAsync();
+
+            if (count == 0)
+                throw new Exception($"Option '{optionText}' not found.");
+
+            // Click the first match
+            await match.First.ScrollIntoViewIfNeededAsync();
+            await match.First.ClickAsync();
+
+            await _page.WaitForTimeoutAsync(300);
+        }
+        // ============================================================
+        // 7) Select an option using List Item By Role
+        // ============================================================
+        public async Task SelectLookupListItem_ByRole(string optionText)
+        {
+            var listBox = _page.GetByRole(AriaRole.Listbox, new() { Name = "Items" });
+            var option = listBox.GetByRole(AriaRole.Option, new() { Name = optionText });
+
+            await option.ClickAsync();
+        }
+        // ============================================================
+        // 8) Select an option using List Item By Aria Label
+        // ============================================================
+        public async Task SelectLookupListItem_ByAriaLabel(string optionText)
+        {
+            var list = _page.Locator("[aria-label='Items']");
+            var option = list.Locator("div[role='option']", new() { HasTextString = optionText });
+
+            await option.ClickAsync();
+        }
+        // ============================================================
+        // 9) Select an option using List Item By CSS
+        // ============================================================
+        public async Task SelectLookupListItem_ByCss(string optionText)
+        {
+            var option = _page.Locator(".dx-list-item >> text=" + optionText);
+            await option.ClickAsync();
+        }
+        // ============================================================
+        // 10) Select an option using List Item By Scroll
+        // ============================================================
+        public async Task SelectLookupItemByScroll(string optionText)
+        {
+            // List container that actually scrolls
+            var scrollContainer = _page.Locator(".dx-scrollview-content");
+
+            // Target option inside the list
+            var item = _page.GetByRole(AriaRole.Option, new() { Name = optionText });
+
+            // Try up to 20 scroll attempts (adjust for long lists)
+            for (int i = 0; i < 20; i++)
+            {
+                if (await item.IsVisibleAsync())
+                {
+                    await item.ClickAsync();
+                    return;
+                }
+                // Scroll down by 300px
+                await scrollContainer.EvaluateAsync("el => el.scrollTop += 300");
+
+                // Small wait for rendering
+                await Task.Delay(200);
+            }
+            throw new Exception($"Option '{optionText}' not found.");
+        }
+        // ============================================================
+        // 11) Select an option contains provided text
+        // ============================================================
+        public async Task SelectLookUpOption(string optionText)
+        {
+            var options = _page.Locator($"//div[contains(normalize-space(), '{optionText}')]");
+
+            // Wait until at least 1 option is available
+            await options.First.WaitForAsync();
+
+            await options.First.ClickAsync();
+            await _page.WaitForTimeoutAsync(500);
+        }
     }
 }

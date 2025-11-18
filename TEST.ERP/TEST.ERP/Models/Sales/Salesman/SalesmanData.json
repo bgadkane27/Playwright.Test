@@ -1,0 +1,53 @@
+﻿{
+  "Features": {
+    "AllowCodeManual": true
+  },
+  "Master": [
+    {
+      "Code": "SM03",
+      "Name": "John Carter",
+      "NameArabic": "جون كارتر",
+      "Description": "Senior Sales Executive",
+      "Other": {
+        "Type": "Salesman",
+        "SalesCommissionInPercent": "5",
+        "Title": "Mr.",
+        "Email": "john.carter@example.com",
+        "Extension": "101",
+        "Mobile": "+1234567890"
+      }
+    },
+    {
+      "Code": "SM04",
+      "Name": "Sara Ahmed",
+      "NameArabic": "سارة أحمد",
+      "Description": "Field Sales Representative",
+      "Other": {
+        "Type": "Salesman",
+        "SalesCommissionInPercent": "7",
+        "Title": "Ms.",
+        "Email": "sara.ahmed@example.com",
+        "Extension": "102",
+        "Mobile": "+1987654321"
+      }
+    }
+  ],
+  "Validate": {
+    "Code": "SM01",
+    "Name": "Mahammed Ebrahimi"
+  },
+  "Update": {
+    "Code": "SM04",
+    "Name": "Rohit Verma",
+    "NameArabic": "روهيت فيرما",
+    "Description": "Updated Key Account Manager"
+  },
+  "Delete": [
+    {
+      "Name": "SM04"
+    },
+    {
+      "Name": "SM03"
+    }
+  ]
+}

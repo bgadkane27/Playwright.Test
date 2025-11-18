@@ -36,7 +36,6 @@
     <Folder Include="Imports\Purchase\" />
     <Folder Include="Imports\Inventory\" />
     <Folder Include="Imports\Accounting\" />
-    <Folder Include="Models\Sales\" />
     <Folder Include="Models\Purchase\" />
     <Folder Include="Models\Inventory\" />
     <Folder Include="Pages\Inventory\" />
