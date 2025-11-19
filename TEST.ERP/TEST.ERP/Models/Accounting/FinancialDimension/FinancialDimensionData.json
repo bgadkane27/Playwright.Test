@@ -11,10 +11,10 @@
   ],
   "Delete": [
     {
-      "Division": "Sales"
+      "Division": "Purchase"
     },
     {
-      "Division": "Purchase"
+      "Division": "Sales"
     }
   ]
 }

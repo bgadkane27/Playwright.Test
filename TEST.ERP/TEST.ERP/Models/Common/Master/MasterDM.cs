@@ -4,14 +4,14 @@ using System.Text;
 
 namespace TEST.ERP.Models.Common.Master
 {
-    #region Entity
+    #region Entity of Master
     public class EntityDM
     {
         public string Name { get; set; }
     }
     #endregion
 
-    #region Features
+    #region Features of Master
     public class FeaturesDM
     {
         #region General
@@ -39,7 +39,7 @@ namespace TEST.ERP.Models.Common.Master
     }
     #endregion
 
-    #region Master Header
+    #region Header of Master
     public class HeaderDM
     {
         public string Code { get; set; }
@@ -70,7 +70,7 @@ namespace TEST.ERP.Models.Common.Master
     }
     #endregion
 
-    #region Master Base
+    #region Base Master
     public class MasterDM<MasterHeader>
     {
         public EntityDM Entity { get; set; }

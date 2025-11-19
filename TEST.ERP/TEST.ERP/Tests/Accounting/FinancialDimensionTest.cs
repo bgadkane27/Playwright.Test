@@ -1,8 +1,4 @@
-﻿using Microsoft.Playwright;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using TEST.ERP.Helpers;
+﻿using TEST.ERP.Helpers;
 using TEST.ERP.Models.Accounting.FinancialDimension;
 using TEST.ERP.Pages.Accounting;
 using TEST.ERP.Tests.Common;
@@ -12,7 +8,7 @@ namespace TEST.ERP.Tests.Accounting
 {
     [TestFixture]
     public class FinancialDimensionTest : BaseTest
-    { 
+    {
         #region Create Financial Dimension
         [Test, Order(1)]
         public async Task CreateFinancialDimension()

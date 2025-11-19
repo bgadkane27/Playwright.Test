@@ -8,7 +8,7 @@ namespace TEST.ERP.Models.Accounting.FinancialDimension
     public class FinancialDimensionRoot
     {
         public List<FinancialDimensionDM> FinancialDimension { get; set; }
-        public List<DeleteDM> Delete { get; set; }
+        public List<FinancialDimensionDeleteDM> Delete { get; set; }
     }
     #endregion    
 
@@ -21,9 +21,9 @@ namespace TEST.ERP.Models.Accounting.FinancialDimension
     #endregion   
 
     #region Delete
-    public class DeleteDM : FinancialDimensionDM
+    public class FinancialDimensionDeleteDM
     {
-
+        public string Division { get; set; }
     }
     #endregion
 }

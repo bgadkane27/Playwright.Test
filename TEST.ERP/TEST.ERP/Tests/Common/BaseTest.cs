@@ -23,10 +23,23 @@ namespace TEST.ERP.Tests.Common
 
             browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
+                Channel = "chrome",
                 Headless = false,
                 SlowMo = 200,
-                Channel = "chrome"   
             });
+
+            //browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+            //{
+            //    Channel = "msedge",
+            //    Headless = false,
+            //    SlowMo = 200,                
+            //});
+
+            //browser = await playwright.Firefox.LaunchAsync(new BrowserTypeLaunchOptions
+            //{
+            //    Headless = false,
+            //    SlowMo = 200
+            //});
 
             context = await browser.NewContextAsync(new BrowserNewContextOptions
             {
