@@ -5,11 +5,11 @@ using System.Text;
 
 namespace TEST.ERP.Pages.Common
 {
-    public class BasePage
+    public class LoginPage
     {
         private readonly IPage _page;
 
-        public BasePage(IPage page)
+        public LoginPage(IPage page)
         {
             _page = page;
         }

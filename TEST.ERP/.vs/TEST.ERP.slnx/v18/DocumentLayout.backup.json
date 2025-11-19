@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Playwright\\TEST.ERP\\",
+  "WorkspaceRootPath": "D:\\Data\\Project\\Playwright.Test\\TEST.ERP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\playwright\\test.erp\\test.erp\\tests\\common\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\data\\project\\playwright.test\\test.erp\\test.erp\\tests\\common\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\tests\\common\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -13,18 +13,28 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 69,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 331,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "BaseTest.cs",
-              "DocumentMoniker": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "DocumentMoniker": "D:\\Data\\Project\\Playwright.Test\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
               "RelativeDocumentMoniker": "TEST.ERP\\Tests\\Common\\BaseTest.cs",
-              "ToolTip": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "ToolTip": "D:\\Data\\Project\\Playwright.Test\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
               "RelativeToolTip": "TEST.ERP\\Tests\\Common\\BaseTest.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwBsAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T02:44:16.351Z",
               "EditorCaption": ""

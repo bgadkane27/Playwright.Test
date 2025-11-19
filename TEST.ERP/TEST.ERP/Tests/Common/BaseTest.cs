@@ -61,7 +61,7 @@ namespace TEST.ERP.Tests.Common
             #endregion
 
             #region Page Objects
-            var basePage = new BasePage(_page);
+            var basePage = new LoginPage(_page);
             #endregion
 
             #region Visit URL and Login

@@ -32,18 +32,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Imports\Sales\" />
-    <Folder Include="Imports\Purchase\" />
-    <Folder Include="Imports\Inventory\" />
-    <Folder Include="Imports\Accounting\" />
-    <Folder Include="Models\Purchase\" />
-    <Folder Include="Models\Inventory\" />
-    <Folder Include="Pages\Inventory\" />
-    <Folder Include="Pages\Sales\" />
-    <Folder Include="Pages\Purchase\" />
-    <Folder Include="Tests\Sales\" />
-    <Folder Include="Tests\Purchase\" />
-    <Folder Include="Tests\Inventory\" />
+    <Folder Include="Models\Inventory\Item\" />
+    <Folder Include="Models\Purchase\Charge\" />
   </ItemGroup>
 
 </Project>
