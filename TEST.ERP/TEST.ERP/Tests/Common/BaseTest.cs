@@ -5,6 +5,7 @@ using System.Text;
 using TEST.ERP.Helpers;
 using TEST.ERP.Models.Common.Login;
 using TEST.ERP.Pages.Common;
+using TEST.ERP.Utilities;
 
 namespace TEST.ERP.Tests.Common
 {
@@ -19,32 +20,14 @@ namespace TEST.ERP.Tests.Common
         [SetUp]
         public async Task SetUp()
         {
-            playwright = await Microsoft.Playwright.Playwright.CreateAsync();
+            playwright = await Playwright.CreateAsync();
 
-            browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
-            {
-                Channel = "chrome",
-                Headless = false,
-                SlowMo = 200,
-            });
-
-            //browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
-            //{
-            //    Channel = "msedge",
-            //    Headless = false,
-            //    SlowMo = 200,                
-            //});
-
-            //browser = await playwright.Firefox.LaunchAsync(new BrowserTypeLaunchOptions
-            //{
-            //    Headless = false,
-            //    SlowMo = 200
-            //});
+            browser = await BrowserFactory.CreateBrowserAsync(playwright);
 
             context = await browser.NewContextAsync(new BrowserNewContextOptions
             {
                 ViewportSize = null
-            });
+            });            
 
             _page = await context.NewPageAsync();
             

@@ -1,9 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Data\\Project\\Playwright.Test\\TEST.ERP\\",
+  "WorkspaceRootPath": "D:\\Data\\Project\\TEST.ERP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\data\\project\\playwright.test\\test.erp\\test.erp\\tests\\common\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\data\\project\\test.erp\\test.erp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\data\\project\\test.erp\\test.erp\\utilities\\browserfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\utilities\\browserfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\data\\project\\test.erp\\test.erp\\tests\\common\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\tests\\common\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -13,31 +21,51 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 69,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 331,
+          "DockedWidth": 88,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BaseTest.cs",
-              "DocumentMoniker": "D:\\Data\\Project\\Playwright.Test\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
-              "RelativeDocumentMoniker": "TEST.ERP\\Tests\\Common\\BaseTest.cs",
-              "ToolTip": "D:\\Data\\Project\\Playwright.Test\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
-              "RelativeToolTip": "TEST.ERP\\Tests\\Common\\BaseTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T02:44:16.351Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\appsettings.json",
+              "RelativeDocumentMoniker": "TEST.ERP\\appsettings.json",
+              "ToolTip": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\appsettings.json",
+              "RelativeToolTip": "TEST.ERP\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-19T12:44:14.421Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseTest.cs",
+              "DocumentMoniker": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "RelativeDocumentMoniker": "TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "ToolTip": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "RelativeToolTip": "TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:41:55.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BrowserFactory.cs",
+              "DocumentMoniker": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\Utilities\\BrowserFactory.cs",
+              "RelativeDocumentMoniker": "TEST.ERP\\Utilities\\BrowserFactory.cs",
+              "ToolTip": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\Utilities\\BrowserFactory.cs",
+              "RelativeToolTip": "TEST.ERP\\Utilities\\BrowserFactory.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:40:50.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }

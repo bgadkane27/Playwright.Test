@@ -11,6 +11,9 @@
   <ItemGroup>
     <PackageReference Include="AutoItX.NetCore" Version="3.3.16.1" />
     <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
     <PackageReference Include="Microsoft.Playwright" Version="1.56.0" />
     <PackageReference Include="Microsoft.Playwright.NUnit" Version="1.56.0" />
@@ -34,6 +37,12 @@
   <ItemGroup>
     <Folder Include="Models\Inventory\Item\" />
     <Folder Include="Models\Purchase\Charge\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
