@@ -44,14 +44,14 @@ namespace TEST.ERP.Tests.Common
             #endregion
 
             #region Page Objects
-            var basePage = new LoginPage(_page);
+            var loginPage = new LoginPage(_page);
             #endregion
 
             #region Visit URL and Login
-            await basePage.GotoUrl(loginModel.Url);
-            await basePage.FillUsername(loginModel.Username);
-            await basePage.FillPassword(loginModel.Password);
-            await basePage.ClickOnLogin();
+            await loginPage.GotoUrl(loginModel.Url);
+            await loginPage.FillUsername(loginModel.Username);
+            await loginPage.FillPassword(loginModel.Password);
+            await loginPage.ClickOnLogin();
             #endregion
         }
         #endregion

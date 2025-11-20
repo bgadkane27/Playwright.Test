@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\TEST.ERP.csproj": {}
+    "D:\\Playwright\\TEST.ERP\\TEST.ERP\\TEST.ERP.csproj": {}
   },
   "projects": {
-    "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\TEST.ERP.csproj": {
+    "D:\\Playwright\\TEST.ERP\\TEST.ERP\\TEST.ERP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\TEST.ERP.csproj",
+        "projectUniqueName": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\TEST.ERP.csproj",
         "projectName": "TEST.ERP",
-        "projectPath": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\TEST.ERP.csproj",
-        "packagesPath": "C:\\Users\\bgadk\\.nuget\\packages\\",
-        "outputPath": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\obj\\",
+        "projectPath": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\TEST.ERP.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\bgadk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

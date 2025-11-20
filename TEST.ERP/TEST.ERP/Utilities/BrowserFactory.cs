@@ -23,7 +23,7 @@ namespace TEST.ERP.Utilities
                 "chrome" => await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
                 {
                     Channel = "chrome",
-                    Headless = true,
+                    Headless = false,
                     SlowMo = 200
                 }),
 
