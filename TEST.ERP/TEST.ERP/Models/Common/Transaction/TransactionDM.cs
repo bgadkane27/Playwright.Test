@@ -65,6 +65,12 @@ namespace TEST.ERP.Models.Common.Transaction
         public string Reason { get; set; }
         public string StockCountBatch { get; set; }
         public string Collector { get; set; }
+
+        public List<LineDM> Lines { get; set; }
+        public List<ChargeDM> Charges { get; set; }
+        public List<PaymentMethodDM> PaymentMethods { get; set; }
+        public OtherDM Others { get; set; }
+        public GeneralDM General { get; set; }
     }
     #endregion
 
@@ -100,9 +106,8 @@ namespace TEST.ERP.Models.Common.Transaction
     #endregion
 
     #region Import
-    public class ImportDM
+    public class ImportDM : HeaderDM
     {
-        public string ReferenceNum { get; set; }
         public string FilePath { get; set; }
     }
     #endregion
@@ -112,8 +117,8 @@ namespace TEST.ERP.Models.Common.Transaction
     {
         public string ReferenceNum { get; set; }
         public string Charge { get; set; }
-        public string Account { get; set; }
-        public string AmountFC { get; set; }
+        public string AccountFC { get; set; }
+        public string AmountLC { get; set; }
     }
     #endregion
 
@@ -123,7 +128,37 @@ namespace TEST.ERP.Models.Common.Transaction
         public string ReferenceNum { get; set; }
         public string PaymentMethod { get; set; }
         public string Currency { get; set; }
+        public string CardNum { get; set; }
         public string AmountFC { get; set; }
+    }
+    #endregion
+
+    #region Other
+    public class OtherDM
+    {
+        public string ReferenceNum { get; set; }
+        public string Description { get; set; }
+        public string ChequeNum { get; set; }
+        public string BillingAddress { get; set; }
+        public string ShippingAddress { get; set; }
+        public string ContactPerson { get; set; }
+        public string ContactPersonName { get; set; }
+        public string ContactPersonMobile { get; set; }
+        public string ContactPersonEmail { get; set; }
+    }
+    #endregion
+
+    #region General
+    public class GeneralDM
+    {
+        public string ReferenceNum { get; set; }
+        public string ExchangeRate { get; set; }
+        public string PaymentTerm { get; set; }        
+        public string ChequeNum { get; set; }
+        public string ContactPerson { get; set; }
+        public string BillingAddress { get; set; }
+        public string ShippingAddress { get; set; }        
+        public string Remarks { get; set; }
     }
     #endregion
 
@@ -135,15 +170,12 @@ namespace TEST.ERP.Models.Common.Transaction
     #endregion
 
     #region Transaction Base Root
-    public class TransactionDM
+    public class TransactionBaseDM<TransactionHeader>
     {
-        public FeatureDM Features { get; set; } = new FeatureDM();
-        public HeaderDM Header { get; set; } = new HeaderDM();
-        public ImportDM Import { get; set; } = new ImportDM();
-        public List<LineDM> Lines { get; set; } = new List<LineDM>();
-        public List<ChargeDM> Charges { get; set; } = new List<ChargeDM>();
-        public List<PaymentMethodDM> PaymentMethods { get; set; } = new List<PaymentMethodDM>();
-        public List<DeleteDM> Deletes { get; set; } = new List<DeleteDM>();
+        public FeatureDM Features { get; set; }
+        public List<TransactionHeader> Transaction { get; set; }
+        public ImportDM Import { get; set; }
+        public List<DeleteDM> Deletes { get; set; }
     }
     #endregion
 }

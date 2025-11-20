@@ -155,7 +155,7 @@ namespace TEST.ERP.Helpers
         public async Task SelectLookupBoxItemRow(string optionText)
         {
             // All lookup rows
-            var rows = _page.Locator("tr.dxeListBoxItemRow_Office365");
+            var rows = _page.Locator("//tr[@class='dxeListBoxItemRow_Office365']");
 
             // Ensure rows are loaded
             await rows.First.WaitForAsync();

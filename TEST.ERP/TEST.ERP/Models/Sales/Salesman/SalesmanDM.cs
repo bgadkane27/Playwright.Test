@@ -24,9 +24,16 @@ namespace TEST.ERP.Models.Sales.Salesman
     }
     #endregion
 
+    #region Update Salesman
+    public class UpdateSalesmanDM : SalesmanHeaderDM
+    {
+    }
+    #endregion
+
     #region Salesman Master Root
     public class SalesmanDM : MasterDM<SalesmanHeaderDM>
     {
+        public new UpdateSalesmanDM Update { get; set; }
     }
     #endregion
 }

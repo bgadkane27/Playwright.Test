@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TEST.ERP.Helpers;
 using TEST.ERP.Utilities;
 
 namespace TEST.ERP.Pages.Accounting
@@ -9,11 +10,13 @@ namespace TEST.ERP.Pages.Accounting
     public class FinancialDimensionPage
     {
         private readonly IPage _page;
+        private readonly LookupHelper _lookupHelper;
 
         public FinancialDimensionPage(IPage page)
         {
             _page = page;
-        }
+            _lookupHelper = new LookupHelper(page);
+        }        
 
         #region Locators
 
@@ -45,36 +48,41 @@ namespace TEST.ERP.Pages.Accounting
         public async Task SelectSegment1(string data)
         {
             await _page.Locator(segment1).ClickAsync();
-            //await _page.WaitForTimeoutAsync(500);
-            await SelectDropDownData(data);
+            //await _page.WaitForTimeoutAsync(500);            
+            //await SelectDropDownData(data);
+            await _lookupHelper.SelectLookupBoxItemRow(data);
         }
 
         public async Task SelectSegment2(string data)
         {
             await _page.Locator(segment2).ClickAsync();
             //await _page.WaitForTimeoutAsync(500);
-            await SelectDropDownData(data);
+            //await SelectDropDownData(data);
+            await _lookupHelper.SelectLookupBoxItemRow(data);
         }
 
         public async Task SelectSegment3(string data)
         {
             await _page.Locator(segment3).ClickAsync();
             //await _page.WaitForTimeoutAsync(500);
-            await SelectDropDownData(data);
+            //await SelectDropDownData(data);
+            await _lookupHelper.SelectLookupBoxItemRow(data);
         }
 
         public async Task SelectSegment4(string data)
         {
             await _page.Locator(segment4).ClickAsync();
             //await _page.WaitForTimeoutAsync(500);
-            await SelectDropDownData(data);
+            //await SelectDropDownData(data);
+            await _lookupHelper.SelectLookupBoxItemRow(data);
         }
 
         public async Task SelectSegment5(string data)
         {
             await _page.Locator(segment5).ClickAsync();
             //await _page.WaitForTimeoutAsync(500);
-            await SelectDropDownData(data);
+            //await SelectDropDownData(data);
+            await _lookupHelper.SelectLookupBoxItemRow(data);
         }
         #endregion
 

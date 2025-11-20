@@ -210,12 +210,14 @@ namespace TEST.ERP.Utilities
         #region Listing Options
         public async Task ProvideMasterNameOnList(string value)
         {
-            await ClearAndProvideValue(dxcol3, value);
+            //await ClearAndProvideValue(dxcol3, value);
+            await _page.Locator(dxcol3).FillAsync(value);
             await _page.WaitForTimeoutAsync(2000);
         }
         public async Task ProvideMasterNameOnListCol4(string value)
         {
-            await ClearAndProvideValue(dxcol4, value);
+            //await ClearAndProvideValue(dxcol4, value);
+            await _page.Locator(dxcol4).FillAsync(value);
             await _page.WaitForTimeoutAsync(2000);
         }
         public async Task SelectRowByName(string entityName)
