@@ -158,7 +158,7 @@ namespace TEST.ERP.Helpers
             var rows = _page.Locator("//tr[@class='dxeListBoxItemRow_Office365']");
 
             // Ensure rows are loaded
-            await rows.First.WaitForAsync();
+            //await rows.First.WaitForAsync();
 
             // Filter matching row (supports partial text)
             var match = rows.Filter(new() { HasText = optionText });
