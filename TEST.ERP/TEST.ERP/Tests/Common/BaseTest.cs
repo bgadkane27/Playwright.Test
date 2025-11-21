@@ -27,6 +27,11 @@ namespace TEST.ERP.Tests.Common
             context = await browser.NewContextAsync(new BrowserNewContextOptions
             {
                 ViewportSize = null
+                //ViewportSize = new()
+                //{
+                //    Width = 1920,
+                //    Height = 1080
+                //}
             });            
 
             _page = await context.NewPageAsync();

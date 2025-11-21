@@ -16,20 +16,25 @@ namespace TEST.ERP.Pages.Accounting
         {
             _page = page;
             _lookupHelper = new LookupHelper(page);
-        }        
+        }
 
         #region Locators
 
         #region Form Title
-        private const string financialDimension = "text=Financial Dimension";
+        private const string financialDimension = "Financial Dimension";
         #endregion
 
         #region Main Info
-        private const string segment1 = "(//td[contains(@id, '.Segment1_B-1')])[2]";
-        private const string segment2 = "(//td[contains(@id, '.Segment2_B-1')])[2]";
-        private const string segment3 = "(//td[contains(@id, '.Segment3_B-1')])[2]";
-        private const string segment4 = "(//td[contains(@id, '.Segment4_B-1')])[2]";
-        private const string segment5 = "(//td[contains(@id, '.Segment5_B-1')])[2]";
+        private const string segment1 = "(//img[contains(@id, '.Segment1_B-1Img')])";
+        private const string segment1Field = "input[id*='Segment1_I']";
+        private const string segment2 = "(//img[contains(@id, '.Segment2_B-1Img')])";
+        private const string segment2Field = "input[id*='Segment2_I']";
+        private const string segment3 = "(//img[contains(@id, '.Segment3_B-1Img')])";
+        private const string segment3Field = "input[id*='Segment3_I']";
+        private const string segment4 = "(//img[contains(@id, '.Segment4_B-1Img')])";
+        private const string segment4Field = "input[id*='Segment4_I']";
+        private const string segment5 = "(//img[contains(@id, '.Segment5_B-1Img')])";
+        private const string segment5Field = "input[id*='Segment5_I']";
         #endregion
 
         #endregion
@@ -39,7 +44,7 @@ namespace TEST.ERP.Pages.Accounting
         #region Form Title
         public async Task ClickOnFinancialDimension()
         {
-            await _page.GetByRole(AriaRole.Link, new() { Name = "Financial Dimension" }).ClickAsync();
+            await _page.GetByRole(AriaRole.Link, new() { Name = financialDimension }).ClickAsync();
             //await _page.WaitForTimeoutAsync(2000);
         }
         #endregion
@@ -48,64 +53,41 @@ namespace TEST.ERP.Pages.Accounting
         public async Task SelectSegment1(string data)
         {
             await _page.Locator(segment1).ClickAsync();
-            //await _page.WaitForTimeoutAsync(500);            
-            //await SelectDropDownData(data);
+            //await _page.Locator(segment1Field).FillAsync(data);
+            //await _page.WaitForTimeoutAsync(500);  
             await _lookupHelper.SelectLookupBoxItemRow(data);
         }
 
         public async Task SelectSegment2(string data)
         {
             await _page.Locator(segment2).ClickAsync();
+            //await _page.Locator(segment2Field).FillAsync(data);
             //await _page.WaitForTimeoutAsync(500);
-            //await SelectDropDownData(data);
             await _lookupHelper.SelectLookupBoxItemRow(data);
         }
 
         public async Task SelectSegment3(string data)
         {
             await _page.Locator(segment3).ClickAsync();
+            //await _page.Locator(segment3Field).FillAsync(data);
             //await _page.WaitForTimeoutAsync(500);
-            //await SelectDropDownData(data);
             await _lookupHelper.SelectLookupBoxItemRow(data);
         }
 
         public async Task SelectSegment4(string data)
         {
             await _page.Locator(segment4).ClickAsync();
+            //await _page.Locator(segment4Field).FillAsync(data);
             //await _page.WaitForTimeoutAsync(500);
-            //await SelectDropDownData(data);
             await _lookupHelper.SelectLookupBoxItemRow(data);
         }
 
         public async Task SelectSegment5(string data)
         {
             await _page.Locator(segment5).ClickAsync();
+            //await _page.Locator(segment5Field).FillAsync(data);
             //await _page.WaitForTimeoutAsync(500);
-            //await SelectDropDownData(data);
             await _lookupHelper.SelectLookupBoxItemRow(data);
-        }
-        #endregion
-
-        #region Common Utility
-        public async Task SelectDropDownData(string option)
-        {
-            var dropdownList = _page.Locator("//tr[@class='dxeListBoxItemRow_Office365']");
-            int count = await dropdownList.CountAsync();
-
-            //await _page.WaitForTimeoutAsync(500);
-
-            for (int i = 0; i < count; i++)
-            {
-                var element = dropdownList.Nth(i);
-                string actualValue = (await element.InnerTextAsync()).Trim();
-
-                if (actualValue.Contains(option))
-                {
-                    await element.ClickAsync();
-                    break;
-                }
-            }
-            //await _page.WaitForTimeoutAsync(2000);
         }
         #endregion
 

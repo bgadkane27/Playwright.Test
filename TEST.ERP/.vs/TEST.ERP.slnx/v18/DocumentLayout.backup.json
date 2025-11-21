@@ -1,21 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Data\\Project\\TEST.ERP\\",
+  "WorkspaceRootPath": "D:\\Playwright\\TEST.ERP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\data\\project\\test.erp\\test.erp\\helpers\\lookuphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\helpers\\lookuphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\data\\project\\test.erp\\test.erp\\pages\\accounting\\financialdimensionpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\playwright\\test.erp\\test.erp\\pages\\accounting\\financialdimensionpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\pages\\accounting\\financialdimensionpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\data\\project\\test.erp\\test.erp\\tests\\accounting\\financialdimensiontest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\playwright\\test.erp\\test.erp\\helpers\\lookuphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\helpers\\lookuphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\playwright\\test.erp\\test.erp\\tests\\common\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\tests\\common\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\playwright\\test.erp\\test.erp\\tests\\accounting\\financialdimensiontest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\tests\\accounting\\financialdimensiontest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\data\\project\\test.erp\\test.erp\\utilities\\commonaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\playwright\\test.erp\\test.erp\\utilities\\commonaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\utilities\\commonaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,47 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FinancialDimensionPage.cs",
-              "DocumentMoniker": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\Pages\\Accounting\\FinancialDimensionPage.cs",
-              "RelativeDocumentMoniker": "TEST.ERP\\Pages\\Accounting\\FinancialDimensionPage.cs",
-              "ToolTip": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\Pages\\Accounting\\FinancialDimensionPage.cs",
-              "RelativeToolTip": "TEST.ERP\\Pages\\Accounting\\FinancialDimensionPage.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAowFsAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:45:31.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LookupHelper.cs",
-              "DocumentMoniker": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\Helpers\\LookupHelper.cs",
-              "RelativeDocumentMoniker": "TEST.ERP\\Helpers\\LookupHelper.cs",
-              "ToolTip": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\Helpers\\LookupHelper.cs",
-              "RelativeToolTip": "TEST.ERP\\Helpers\\LookupHelper.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAIA2wJoAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:50:33.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CommonAction.cs",
-              "DocumentMoniker": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\Utilities\\CommonAction.cs",
-              "RelativeDocumentMoniker": "TEST.ERP\\Utilities\\CommonAction.cs",
-              "ToolTip": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\Utilities\\CommonAction.cs",
-              "RelativeToolTip": "TEST.ERP\\Utilities\\CommonAction.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAcwNEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:41:10.005Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
@@ -74,15 +39,65 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FinancialDimensionTest.cs",
-              "DocumentMoniker": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\Tests\\Accounting\\FinancialDimensionTest.cs",
-              "RelativeDocumentMoniker": "TEST.ERP\\Tests\\Accounting\\FinancialDimensionTest.cs",
-              "ToolTip": "D:\\Data\\Project\\TEST.ERP\\TEST.ERP\\Tests\\Accounting\\FinancialDimensionTest.cs",
-              "RelativeToolTip": "TEST.ERP\\Tests\\Accounting\\FinancialDimensionTest.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBgAAAAYAAAAAAAAAA==",
+              "Title": "BaseTest.cs",
+              "DocumentMoniker": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "RelativeDocumentMoniker": "TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "ToolTip": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "RelativeToolTip": "TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:40:54.432Z",
+              "WhenOpened": "2025-11-21T10:33:47.694Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FinancialDimensionPage.cs",
+              "DocumentMoniker": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Pages\\Accounting\\FinancialDimensionPage.cs",
+              "RelativeDocumentMoniker": "TEST.ERP\\Pages\\Accounting\\FinancialDimensionPage.cs",
+              "ToolTip": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Pages\\Accounting\\FinancialDimensionPage.cs",
+              "RelativeToolTip": "TEST.ERP\\Pages\\Accounting\\FinancialDimensionPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T12:45:31.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LookupHelper.cs",
+              "DocumentMoniker": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Helpers\\LookupHelper.cs",
+              "RelativeDocumentMoniker": "TEST.ERP\\Helpers\\LookupHelper.cs",
+              "ToolTip": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Helpers\\LookupHelper.cs",
+              "RelativeToolTip": "TEST.ERP\\Helpers\\LookupHelper.cs",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAvwAEBAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T12:50:33.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CommonAction.cs",
+              "DocumentMoniker": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Utilities\\CommonAction.cs",
+              "RelativeDocumentMoniker": "TEST.ERP\\Utilities\\CommonAction.cs",
+              "ToolTip": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Utilities\\CommonAction.cs",
+              "RelativeToolTip": "TEST.ERP\\Utilities\\CommonAction.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwNEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T12:41:10.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FinancialDimensionTest.cs",
+              "DocumentMoniker": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Tests\\Accounting\\FinancialDimensionTest.cs",
+              "RelativeDocumentMoniker": "TEST.ERP\\Tests\\Accounting\\FinancialDimensionTest.cs",
+              "ToolTip": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Tests\\Accounting\\FinancialDimensionTest.cs",
+              "RelativeToolTip": "TEST.ERP\\Tests\\Accounting\\FinancialDimensionTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T12:40:54.432Z"
             }
           ]
         }

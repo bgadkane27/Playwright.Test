@@ -1,4 +1,5 @@
 ﻿using Microsoft.Playwright;
+using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -154,24 +155,22 @@ namespace TEST.ERP.Helpers
         // ============================================================
         public async Task SelectLookupBoxItemRow(string optionText)
         {
-            // All lookup rows
-            var rows = _page.Locator("//tr[@class='dxeListBoxItemRow_Office365']");
+            var itemsList = _page.Locator("//tr[@class='dxeListBoxItemRow_Office365']");
 
-            // Ensure rows are loaded
-            //await rows.First.WaitForAsync();
+            int count = await itemsList.CountAsync();
+            for (int i = 0; i < count; i++)
+            {
+                var element = itemsList.Nth(i);
+                string actualValue = (await element.InnerTextAsync()).Trim();
 
-            // Filter matching row (supports partial text)
-            var match = rows.Filter(new() { HasText = optionText });
-
-            int matchCount = await match.CountAsync();
-
-            if (matchCount == 0)
-                throw new Exception($"Option '{optionText}' not found.");
-
-            await match.First.ScrollIntoViewIfNeededAsync();
-            await match.First.ClickAsync();
-
-            await _page.WaitForTimeoutAsync(500);
+                if (actualValue.Contains(optionText))
+                {
+                    await element.ClickAsync();
+                    await _page.WaitForTimeoutAsync(500);
+                    break;
+                }
+            }
+            //await _page.WaitForTimeoutAsync(2000);
         }
         // ============================================================
         // 6) Select an option using List Item Content
