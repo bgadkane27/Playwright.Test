@@ -16,7 +16,7 @@ namespace TEST.ERP.Utilities
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            string browserName = config["Browser"]?.ToLower() ?? "chrome";
+            var browserName = config["Browser"]?.ToLower() ?? "chrome";
 
             return browserName switch
             {

@@ -46,8 +46,8 @@ namespace TEST.ERP.Tests.Accounting
                     {
                         await commonAction.ClickOnListNew();
 
-                        await financialDimensionPage.SelectSegment1(record.Division);
-                        await financialDimensionPage.SelectSegment2(record.Department);
+                        await financialDimensionPage.SelectSegment("Segment1", record.Division);
+                        await financialDimensionPage.SelectSegment("Segment2", record.Department);
 
                         await commonAction.ClickOnFormSave();
 
@@ -64,7 +64,7 @@ namespace TEST.ERP.Tests.Accounting
                     {
                         skippedRecords.Add(record.Division + " : " + record.Department);
                         Console.WriteLine($"🚫 Skipped Record: {record.Division} : {record.Department} | Reason: {ex.Message}");
-                        continue;
+                        //continue;
                     }
                 }
                 #endregion
@@ -102,7 +102,7 @@ namespace TEST.ERP.Tests.Accounting
                 #region Page Objects
                 var commonAction = new CommonAction(_page);
                 var accountingSetupPage = new AccountingSetupPage(_page);
-                var financialDimensionPage = new FinancialDimensionPage(_page);
+                //var financialDimensionPage = new FinancialDimensionPage(_page);
                 #endregion
 
                 #region Navigate To Financial Dimension
@@ -141,7 +141,7 @@ namespace TEST.ERP.Tests.Accounting
                         skippedRecords.Add(record.Division + " : " + record.Department);
                         Console.WriteLine($"[Warning]: Error while deleting '{record.Division} : {record.Department}': {ex.Message}");
                         await commonAction.ClickOnListRefresh();
-                        continue;
+                        //continue;
                     }
                 }
                 #endregion

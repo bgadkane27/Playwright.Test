@@ -35,11 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Inventory\Item\" />
-    <Folder Include="Models\Purchase\Charge\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

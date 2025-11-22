@@ -135,32 +135,32 @@ namespace TEST.ERP.Helpers
             // All lookup rows
             var rows = _page.Locator("tr.dxgvDataRow_Office365");
 
-            // Ensure rows are loaded
-            await rows.First.WaitForAsync();
+            int count = await rows.CountAsync();
+            for (int i = 0; i < count; i++)
+            {
+                var element = rows.Nth(i);
+                string actualValue = (await element.InnerTextAsync()).Trim();
 
-            // Filter matching row (supports partial text)
-            var match = rows.Filter(new() { HasText = optionText });
-
-            // Validate if a matching row exists
-            if (await match.CountAsync() == 0)
-                throw new Exception($"Option '{optionText}' not found.");
-
-            // Click the first matching row
-            await match.First.ScrollIntoViewIfNeededAsync();
-            await match.First.ClickAsync();
-            await _page.WaitForTimeoutAsync(1000);
+                if (actualValue.Contains(optionText))
+                {
+                    await element.ClickAsync();
+                    await _page.WaitForTimeoutAsync(500);
+                    break;
+                }
+            }
+            //await _page.WaitForTimeoutAsync(2000);
         }
         // ============================================================
         // 5) Select an option using Box Item Row
         // ============================================================
         public async Task SelectLookupBoxItemRow(string optionText)
         {
-            var itemsList = _page.Locator("//tr[@class='dxeListBoxItemRow_Office365']");
+            var rows = _page.Locator("//tr[@class='dxeListBoxItemRow_Office365']");
 
-            int count = await itemsList.CountAsync();
+            int count = await rows.CountAsync();
             for (int i = 0; i < count; i++)
             {
-                var element = itemsList.Nth(i);
+                var element = rows.Nth(i);
                 string actualValue = (await element.InnerTextAsync()).Trim();
 
                 if (actualValue.Contains(optionText))
@@ -181,7 +181,7 @@ namespace TEST.ERP.Helpers
             var items = _page.Locator(".dx-list-item .dx-item-content");
 
             // Ensure the list has loaded
-            await items.First.WaitForAsync();
+            //await items.First.WaitForAsync();
 
             // Filter items using text (supports partial match)
             var match = items.Filter(new() { HasText = optionText });
