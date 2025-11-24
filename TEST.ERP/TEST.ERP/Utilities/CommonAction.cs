@@ -919,27 +919,27 @@ namespace TEST.ERP.Utilities
         #endregion
 
         #region Validation
-        public async Task ValidateSucess(string expectedMessage)
+        public async Task ValidateSuccess(string expectedMessage)
         {
-            var element = _page.Locator(".dx-toast-success").First;
-            string actualMessage = await element.InnerTextAsync();
+            var toast = _page.Locator(".dx-toast-success").First;
 
-            Assert.That(actualMessage, Does.Contain(expectedMessage));
+            await Assertions.Expect(toast).ToBeVisibleAsync();
+            await Assertions.Expect(toast).ToContainTextAsync(expectedMessage);
         }
         public async Task ValidateMessage(string expectedMessage)
         {
-            var element = _page.Locator(".dx-toast-message").First;
-            string actualMessage = await element.InnerTextAsync();
+            var toast = _page.Locator(".dx-toast-message").First;
 
-            Assert.That(actualMessage, Does.Contain(expectedMessage));
+            await Assertions.Expect(toast).ToBeVisibleAsync();
+            await Assertions.Expect(toast).ToContainTextAsync(expectedMessage);
         }
         public async Task ValidateSummary(string expectedMessage)
         {
-            var element = _page.Locator("#ValidationSummary");
-            string actualMessage = await element.InnerTextAsync();
+            var toast = _page.Locator("#ValidationSummary").First;
 
-            Assert.That(actualMessage, Does.Contain(expectedMessage));
-        }
+            await Assertions.Expect(toast).ToBeVisibleAsync();
+            await Assertions.Expect(toast).ToContainTextAsync(expectedMessage);
+        }        
         #endregion        
 
         #endregion

@@ -37,11 +37,11 @@ namespace TEST.ERP.Pages.Accounting
 
             _segmentFields = new Dictionary<string, ILocator>
             {
-                { "Segment1", page.Locator("input[id*='Segment1_I']") },
-                { "Segment2", page.Locator("input[id*='Segment2_I']") },
-                { "Segment3", page.Locator("input[id*='Segment3_I']") },
-                { "Segment4", page.Locator("input[id*='Segment4_I']") },
-                { "Segment5", page.Locator("input[id*='Segment5_I']") }
+                { "Segment1", page.Locator("//input[contains(@id, 'Segment1_I')]") },
+                { "Segment2", page.Locator("//input[contains(@id, 'Segment2_I')]") },
+                { "Segment3", page.Locator("//input[contains(@id, 'Segment3_I')]") },
+                { "Segment4", page.Locator("//input[contains(@id, 'Segment4_I')]") },
+                { "Segment5", page.Locator("//input[contains(@id, 'Segment5_I')]") }
             };
             #endregion
         }
@@ -60,7 +60,7 @@ namespace TEST.ERP.Pages.Accounting
         {
             
             await _segments[segmentName].ClickAsync();
-            // await _segmentFields[segmentName].FillAsync(value);
+            //await _segmentFields[segmentName].FillAsync(value);
             //await _page.WaitForTimeoutAsync(500); 
             await _lookupHelper.SelectLookupBoxItemRow(value);
         }       
