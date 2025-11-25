@@ -64,7 +64,6 @@ namespace TEST.ERP.Tests.Accounting
                     {
                         skippedRecords.Add(record.Division + " : " + record.Department);
                         Console.WriteLine($"🚫 Skipped Record: {record.Division} : {record.Department} | Reason: {ex.Message}");
-                        //continue;
                     }
                 }
                 #endregion
