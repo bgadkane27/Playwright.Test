@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NknlknEDqBA=",
+  "dgSpecHash": "HrcjXRcafYI=",
   "success": true,
   "projectFilePath": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\TEST.ERP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\autoitx.netcore\\3.3.16.1\\autoitx.netcore.3.3.16.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\fluentassertions\\8.8.0\\fluentassertions.8.8.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.applicationinsights\\2.23.0\\microsoft.applicationinsights.2.23.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.codecoverage\\18.0.1\\microsoft.codecoverage.18.0.1.nupkg.sha512",

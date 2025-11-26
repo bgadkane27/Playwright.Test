@@ -25,6 +25,19 @@
           "build/netstandard2.0/coverlet.collector.targets": {}
         }
       },
+      "FluentAssertions/8.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentAssertions.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/FluentAssertions.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.ApplicationInsights/2.23.0": {
         "type": "package",
         "compile": {
@@ -1055,6 +1068,31 @@
         "coverlet-icon.png",
         "coverlet.collector.6.0.4.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "FluentAssertions/8.8.0": {
+      "sha512": "m0kwcqBwvVel03FuMa7Ozo/oTaxYbjeNlcOhQFkyQpwX/8wks6RNl/Jnn58DCZVs6c2oG1RsCZw7HfKSaxLm3w==",
+      "type": "package",
+      "path": "fluentassertions/8.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "FluentAssertions.png",
+        "LICENSE",
+        "fluentassertions.8.8.0.nupkg.sha512",
+        "fluentassertions.nuspec",
+        "lib/net47/FluentAssertions.dll",
+        "lib/net47/FluentAssertions.pdb",
+        "lib/net47/FluentAssertions.xml",
+        "lib/net6.0/FluentAssertions.dll",
+        "lib/net6.0/FluentAssertions.pdb",
+        "lib/net6.0/FluentAssertions.xml",
+        "lib/netstandard2.0/FluentAssertions.dll",
+        "lib/netstandard2.0/FluentAssertions.pdb",
+        "lib/netstandard2.0/FluentAssertions.xml",
+        "lib/netstandard2.1/FluentAssertions.dll",
+        "lib/netstandard2.1/FluentAssertions.pdb",
+        "lib/netstandard2.1/FluentAssertions.xml"
       ]
     },
     "Microsoft.ApplicationInsights/2.23.0": {
@@ -2675,6 +2713,7 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "AutoItX.NetCore >= 3.3.16.1",
+      "FluentAssertions >= 8.8.0",
       "Microsoft.Extensions.Configuration >= 10.0.0",
       "Microsoft.Extensions.Configuration.FileExtensions >= 10.0.0",
       "Microsoft.Extensions.Configuration.Json >= 10.0.0",
@@ -2742,6 +2781,10 @@
           "AutoItX.NetCore": {
             "target": "Package",
             "version": "[3.3.16.1, )"
+          },
+          "FluentAssertions": {
+            "target": "Package",
+            "version": "[8.8.0, )"
           },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
