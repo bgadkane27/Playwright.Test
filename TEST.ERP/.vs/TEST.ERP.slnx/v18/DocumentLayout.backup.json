@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Playwright\\TEST.ERP\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\playwright\\test.erp\\test.erp\\utilities\\browserfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\utilities\\browserfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\playwright\\test.erp\\test.erp\\pages\\common\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\pages\\common\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\playwright\\test.erp\\test.erp\\tests\\common\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\tests\\common\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|d:\\playwright\\test.erp\\test.erp\\tests\\accounting\\financialdimensiontest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{782AB778-F0BE-76A1-6556-B16EC74585F2}|TEST.ERP\\TEST.ERP.csproj|solutionrelative:test.erp\\tests\\accounting\\financialdimensiontest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,24 +26,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:14:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BrowserFactory.cs",
+              "DocumentMoniker": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Utilities\\BrowserFactory.cs",
+              "RelativeDocumentMoniker": "TEST.ERP\\Utilities\\BrowserFactory.cs",
+              "ToolTip": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Utilities\\BrowserFactory.cs",
+              "RelativeToolTip": "TEST.ERP\\Utilities\\BrowserFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T01:39:43.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginPage.cs",
+              "DocumentMoniker": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Pages\\Common\\LoginPage.cs",
+              "RelativeDocumentMoniker": "TEST.ERP\\Pages\\Common\\LoginPage.cs",
+              "ToolTip": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Pages\\Common\\LoginPage.cs",
+              "RelativeToolTip": "TEST.ERP\\Pages\\Common\\LoginPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T16:04:44.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseTest.cs",
+              "DocumentMoniker": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "RelativeDocumentMoniker": "TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "ToolTip": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "RelativeToolTip": "TEST.ERP\\Tests\\Common\\BaseTest.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwDgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T16:04:19.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FinancialDimensionTest.cs",
               "DocumentMoniker": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Tests\\Accounting\\FinancialDimensionTest.cs",
               "RelativeDocumentMoniker": "TEST.ERP\\Tests\\Accounting\\FinancialDimensionTest.cs",
               "ToolTip": "D:\\Playwright\\TEST.ERP\\TEST.ERP\\Tests\\Accounting\\FinancialDimensionTest.cs",
               "RelativeToolTip": "TEST.ERP\\Tests\\Accounting\\FinancialDimensionTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T17:14:19.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T17:14:19.12Z"
             }
           ]
         },
